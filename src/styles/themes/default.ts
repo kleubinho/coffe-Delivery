@@ -24,10 +24,8 @@ export const defaultTheme = {
     },
   },
 
-  MAX_WIDTH: 1200,
 
   FONT: {
-    BALLO: "Baloo 2",
     ROBOTO: "Roboto",
   },
 };

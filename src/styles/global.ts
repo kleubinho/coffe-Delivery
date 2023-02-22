@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 
 body {
     background-color: ${({theme}) => theme.COLORS.BASE.BACKGROUND};
+    font-family: ${({theme}) => theme.FONT.ROBOTO};
 }
 
 button {
