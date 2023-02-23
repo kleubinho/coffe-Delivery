@@ -1,21 +1,24 @@
 import { MapPin, ShoppingCart } from "phosphor-react";
 import { useTheme } from "styled-components";
 import logo from "../../assets/Logo.png";
-import { CheckoutLocation, HeaderContainer, HeaderIcon, Logo, MapIcon } from "./styles";
+import { BackgrounIconVariant, CheckoutLocation, HeaderContainer, HeaderIcon, Logo, MapIcon } from "./styles";
+
+
 
 export function Header() {
+  
 
   return (
     <HeaderContainer>
       <Logo src={logo} alt="Logo COffe" />
 
       <CheckoutLocation>
-        <HeaderIcon>
+        <HeaderIcon variant="primary"> 
           <MapIcon  />
           <p>São Paulo, SP</p>
         </HeaderIcon>
 
-        <HeaderIcon>
+        <HeaderIcon variant="secondary">
           <ShoppingCart size={22} weight="fill" />
         </HeaderIcon>
       </CheckoutLocation>
