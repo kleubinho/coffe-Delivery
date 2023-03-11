@@ -20,8 +20,10 @@ export function Header() {
         </HeaderIcon>
 
         <HeaderIcon variant="secondary">
-          <small>3</small>
-          <ShoppingCartIcon size={22} weight="fill" />
+          <div>
+            <small>3</small>
+          </div>
+          <ShoppingCartIcon />
         </HeaderIcon>
       </CheckoutLocation>
     </HeaderContainer>
