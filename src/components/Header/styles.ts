@@ -1,5 +1,5 @@
 import styled, {css} from "styled-components";
-import { MapPin, ShoppingCart } from "phosphor-react";
+import { MapPin } from "phosphor-react";
 
 export const HeaderContainer = styled.header`
   display: flex;

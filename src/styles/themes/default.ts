@@ -28,4 +28,4 @@ export const defaultTheme = {
   FONT: {
     ROBOTO: "Roboto",
   },
-};
+} as const
