@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { ShoppingCart } from "phosphor-react";
+import { ShoppingCart, Plus, Minus } from "phosphor-react";
 
 export const Container = styled.div`
   display: flex;
@@ -63,19 +63,50 @@ export const AddCart = styled.div`
   }
 `;
 
-export const Cart = styled.div`
+export const QuantityCart = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 80px;
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: ${(props) => props.theme.COLORS.BASE["BASE_BUTTON"]};
-  padding: 10px 5px;
+  padding: 12px 5px;
 `;
 
-export const ShoppingCartIcon = styled(ShoppingCart).attrs(({ theme }) => ({
-  weight: "fill",
-  size: 22,
+export const BackgroundCart = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: ${(props) => props.theme.COLORS.PRODUCT["PURPLE_DARK"]};
+  transition: background 0.2s;
+
+  &:hover {
+    background-color: ${(props) => props.theme.COLORS.PRODUCT["PURPLE"]};
+  }
+`;
+
+export const PlusIcon = styled(Plus).attrs(({ theme }) => ({
+  color: theme.COLORS.PRODUCT["PURPLE"],
+  cursor: "pointer",
+  fill: theme.COLORS.PRODUCT["YELLOW_DARK"]
 }))`
-  background-color: ${props => props.theme.COLORS.PRODUCT["PURPLE_DARK"]};
+  &:hover {
+    color: ${(props) => props.theme.COLORS.PRODUCT["YELLOW_DARK"]};
+  }
+`;
+
+export const MinusIcon = styled(Minus).attrs(({ theme }) => ({
+  color: theme.COLORS.PRODUCT["PURPLE"],
+  cursor: "pointer",
+}))``;
+
+export const ShoppingCartIcon = styled(ShoppingCart).attrs(() => ({
+  weight: "fill",
+  size: 30,
+  color: "#fff",
+  cursor: "pointer",
+}))`
+  padding: 2px;
 `;

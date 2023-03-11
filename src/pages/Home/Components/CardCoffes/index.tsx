@@ -1,8 +1,23 @@
-import { ShoppingCart, Plus, Minus } from "phosphor-react";
+import { useState } from "react";
+import { useTheme } from "styled-components";
 import coffeDefault from "../../../../assets/Expresso.png";
 import * as S from "./styles";
 
 export function CardCoffe() {
+  const [quantity, setQuantity] = useState(0);
+
+  const lessQuantity = () => {
+    if (quantity === 0) {
+      return;
+    }
+    setQuantity(quantity - 1);
+  };
+
+  const moreQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const theme = useTheme();
   return (
     <S.Container>
       <S.CoffeImg src={coffeDefault} alt="" />
@@ -18,12 +33,14 @@ export function CardCoffe() {
           <small>R$</small>9,90
         </p>
 
-        <S.Cart>
-          <Minus />
-          <p>0</p>
-          <Plus />
-        </S.Cart>
-        <S.ShoppingCartIcon />
+        <S.QuantityCart>
+          <S.MinusIcon onClick={lessQuantity} />
+          <p style={{ color: "#000" }}>{quantity}</p>
+          <S.PlusIcon onClick={moreQuantity} />
+        </S.QuantityCart>
+        <S.BackgroundCart>
+          <S.ShoppingCartIcon />
+        </S.BackgroundCart>
       </S.AddCart>
     </S.Container>
   );

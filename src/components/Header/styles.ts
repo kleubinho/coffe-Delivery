@@ -1,5 +1,5 @@
-import styled, {css} from "styled-components";
-import { MapPin } from "phosphor-react";
+import styled from "styled-components";
+import { MapPin, ShoppingCart } from "phosphor-react";
 
 export const HeaderContainer = styled.header`
   display: flex;
@@ -24,10 +24,10 @@ interface BackgroundIconProps {
   variant: BackgrounIconVariant;
 }
 
-const backgrounIconVariants = { 
+const backgrounIconVariants = {
   primary: "#EBE5F9",
-  secondary: "#F1E9C9"
-}
+  secondary: "#F1E9C9",
+};
 
 export const HeaderIcon = styled.div<BackgroundIconProps>`
   display: flex;
@@ -36,16 +36,22 @@ export const HeaderIcon = styled.div<BackgroundIconProps>`
   border-radius: 10px;
 
   p {
-    color: ${({theme}) => theme.COLORS.PRODUCT.PURPLE_DARK}
+    color: ${({ theme }) => theme.COLORS.PRODUCT.PURPLE_DARK};
   }
-  
-  ${props => {
-    return `background-color: ${backgrounIconVariants[props.variant]}`
+
+  ${(props) => {
+    return `background-color: ${backgrounIconVariants[props.variant]}`;
   }}
 `;
 
 export const MapIcon = styled(MapPin).attrs(({ theme }) => ({
   size: 22,
   color: theme.COLORS.PRODUCT.PURPLE,
+  weight: "fill",
+}))``;
+
+export const ShoppingCartIcon = styled(ShoppingCart).attrs(({ theme }) => ({
+  size: 22,
+  color: theme.COLORS.PRODUCT["YELLOW_DARK"],
   weight: "fill",
 }))``;

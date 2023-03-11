@@ -1,4 +1,3 @@
-import { ShoppingCart } from "phosphor-react";
 import logo from "../../assets/Logo.png";
 import {
   CheckoutLocation,
@@ -6,6 +5,7 @@ import {
   HeaderIcon,
   Logo,
   MapIcon,
+  ShoppingCartIcon,
 } from "./styles";
 
 export function Header() {
@@ -20,7 +20,8 @@ export function Header() {
         </HeaderIcon>
 
         <HeaderIcon variant="secondary">
-          <ShoppingCart size={22} weight="fill" />
+          <small>3</small>
+          <ShoppingCartIcon size={22} weight="fill" />
         </HeaderIcon>
       </CheckoutLocation>
     </HeaderContainer>
