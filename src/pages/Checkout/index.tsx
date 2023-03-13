@@ -52,6 +52,8 @@ export function Checkout() {
       <S.Generic>
         <S.Title>Cafés selecionados</S.Title>
       </S.Generic>
+
+      <S.ChoosePayMethod></S.ChoosePayMethod>
     </S.ContainerForm>
   );
 }

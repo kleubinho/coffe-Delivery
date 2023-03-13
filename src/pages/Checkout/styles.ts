@@ -28,3 +28,5 @@ export const InputTable = styled.table`
     line-height: 50px;
   }
 `;
+
+export const ChoosePayMethod = styled.div``
