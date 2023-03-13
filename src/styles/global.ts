@@ -22,8 +22,7 @@ button {
 }
 
 input, button, textarea {
-    font-family: 'Roboto', sans-serif;
-    
+    font-family: 'Roboto', sans-serif;    
     outline: none;
 }
 
