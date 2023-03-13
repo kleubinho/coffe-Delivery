@@ -8,8 +8,8 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 body {
-    background-color: ${({theme}) => theme.COLORS.BASE.BACKGROUND};
-    font-family: ${({theme}) => theme.FONT.ROBOTO};
+    background-color: ${({ theme }) => theme.COLORS.BASE.BACKGROUND};
+    font-family: ${({ theme }) => theme.FONT.ROBOTO};
 }
 
 button {
@@ -19,5 +19,26 @@ button {
       background-color: ${theme.COLORS.PRODUCT.YELLOW};
       color: ${theme.COLORS.BASE.WHITE};
     `}
+}
+
+input, button, textarea {
+    font-family: 'Roboto', sans-serif;
+    
+    outline: none;
+}
+
+input {
+    ${({ theme }) => css`
+      background-color: ${theme.COLORS.BASE["BASE_INPUT"]};
+      color: ${theme.COLORS.BASE["BASE_TEXT"]};
+      border: 1px solid ${theme.COLORS.BASE["BASE_BUTTON"]};
+      padding: 10px;
+      &::placeholder {
+        color: ${theme.COLORS.BASE["BASE_LABEL"]};
+      }
+    `}
+    
+    border-radius:4px;
+    
 }
 `;

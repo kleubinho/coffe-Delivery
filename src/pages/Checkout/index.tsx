@@ -10,6 +10,12 @@ export function Checkout() {
         <S.ContetentForm>
             <h2><MapPinLine/>Endereço de Entrega</h2>
             <span>Informe o endereço onde deseja receber seu pedido</span>
+
+            <S.InputTable>
+              <td>
+                <input type="text"  placeholder="CEP"/>
+              </td>
+            </S.InputTable>
         </S.ContetentForm>
       </div>
     </S.ContainerForm>

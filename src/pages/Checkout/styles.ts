@@ -13,3 +13,6 @@ export const Title = styled.h2`
 export const ContetentForm = styled.div`
 background-color: ${props => props.theme.COLORS.BASE['BASE_CARD']};
 `
+
+export const InputTable = styled.table`
+`
